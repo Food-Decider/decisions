@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.FoodDecider" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryDarkColor</item>
+        <item name="colorOnPrimary">@color/whiteSoft</item>
+
+        <item name="colorSecondary">@color/secondaryColor</item>
+        <item name="colorSecondaryVariant">@color/primaryLightColor</item>
+        <item name="colorOnSecondary">@color/whiteSoft</item>
+
+        <item name="android:windowBackground">@color/backgroundColor</item>
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+
+        <item name="buttonStyle">@style/Widget.FoodDecider.Button</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.FoodDecider.Headline</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.FoodDecider.Body</item>
+    </style>
+</resources>
+

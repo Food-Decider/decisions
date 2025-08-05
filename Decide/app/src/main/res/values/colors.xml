@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primaryColor">#FF6F61</color>        <!-- Peach Orange -->
+    <color name="primaryLightColor">#FFA08D</color>
+    <color name="primaryDarkColor">#CC564D</color>
+    <color name="secondaryColor">#98DDCA</color>      <!-- Mint Green -->
+    <color name="backgroundColor">#FFF5E1</color>     <!-- Cream -->
+    <color name="textColorPrimary">#6B6B6B</color>    <!-- Warm Gray -->
+    <color name="whiteSoft">#FAFAFA</color>           <!-- Soft White -->
+
+
+</resources>

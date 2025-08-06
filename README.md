@@ -32,22 +32,25 @@ The following REQUIRED files are included:
   - [X] App Spec (Milestone 1)
   - [X] Checked off 2+ completed features
   - [X] 2+ Videos/GIFs of build progress
+  - [X] Bonus: Digital Wireframes & Mockups
+  - [X] Bonus: Interactive Prototype
 
 - [X] Our 🎥 Demo Video
   - [X] We have also added the Demo Video Link to the Group Info Form on the course portal.
 
 The following EXTRA features are implemented:
 
-- [ ] List anything else that you added to improve your submission!
+- [X] App uses an additional API (https://yesno.wtf/) that helps our users make even more decisions quickly!
 
 ## 🎥 Demo Video
-https://youtu.be/6DwCypSrT5M
 
 Here's a video that demos all of the app's implemented features:
+[![Watch the video](https://img.youtube.com/vi/6DwCypSrT5M/maxresdefault.jpg)](https://youtu.be/6DwCypSrT5M)
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Demo' width='' alt='Video Demo' />
+If above doesn't work, click this direct link:
+https://youtu.be/6DwCypSrT5M
 
-VIDEO created with **Zoom**
+VIDEO created with **Zoom** and **Final Cut Pro**
 
 ## Notes
 

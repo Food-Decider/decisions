@@ -73,6 +73,7 @@ Required Feature
 ### [BONUS] Digital Wireframes & Mockups
 
 ### [BONUS] Interactive Prototype
+<img src="https://i.imgur.com/rmEcs8n.gif" width=600>
 
 ## Build Notes
 

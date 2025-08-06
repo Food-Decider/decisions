@@ -10,7 +10,7 @@ Submitted by:
 - **Michael Sim**
 - **Favour Asomba**
 
-Time spent: **X** hours spent in total
+Time spent: **10** hours spent in total
 
 ## Summary
 
@@ -22,16 +22,16 @@ This document provides a summary of our project building process for our app, **
 
 The following REQUIRED features are completed:
 
-- [ ] Assign features to each member of your group
-- [ ] Establish a goal time for completing each feature
+- [X] Assign features to each member of your group
+- [X] Establish a goal time for completing each feature
 
 The following REQUIRED files are included:
 
-- [ ] Updated 📄 `project_spec.md`, which contains:
+- [X] Updated 📄 `project_spec.md`, which contains:
   - [X] App Overview (Milestone 1)
   - [X] App Spec (Milestone 1)
-  - [ ] Checked off 2+ completed features
-  - [ ] 2+ Videos/GIFs of build progress
+  - [X] Checked off 2+ completed features
+  - [X] 2+ Videos/GIFs of build progress
 
 - [ ] Our 🎥 Demo Video
   - [ ] We have also added the Demo Video Link to the Group Info Form on the course portal.

@@ -41,6 +41,7 @@ The following EXTRA features are implemented:
 - [ ] List anything else that you added to improve your submission!
 
 ## 🎥 Demo Video
+https://youtu.be/6DwCypSrT5M
 
 Here's a video that demos all of the app's implemented features:
 

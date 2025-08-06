@@ -1,5 +1,6 @@
 package com.example.decide
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -37,6 +38,7 @@ class MainActivity : AppCompatActivity() {
         tvResult = findViewById(R.id.tvResult)
         rvRestaurants = findViewById(R.id.rvRestaurants)
 
+
         adapter = RestaurantAdapter(restaurants)
         rvRestaurants.layoutManager = LinearLayoutManager(this)
         rvRestaurants.adapter = adapter
@@ -52,6 +54,14 @@ class MainActivity : AppCompatActivity() {
 
         btnDecide.setOnClickListener {
             decideRestaurant()
+        }
+
+        val changeButton = findViewById<Button>(R.id.btnChangeToCooking)
+
+        // Set click listener to launch Cooking activity
+        changeButton.setOnClickListener {
+            val intent = Intent(this, Cooking::class.java)
+            startActivity(intent)
         }
     }
 

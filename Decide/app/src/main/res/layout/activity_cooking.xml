@@ -10,47 +10,47 @@
     android:padding="24dp"
     >
 
-    <EditText
-        android:id="@+id/etFood"
+    <TextView
+        android:id="@+id/tvIngredient"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="What are you craving?" />
-
-    <Button
-        android:id="@+id/btnFind"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Find Food"
+        android:text="What is your main ingredient?"
+        android:textSize="20sp"
         />
 
     <Button
-        android:id="@+id/btnChangeToCooking"
+        android:id="@+id/btnBeef"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="I want to cook!"
+        android:text="Beef"
         />
 
+    <Button
+        android:id="@+id/btnChicken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chicken"
+        />
+
+    <Button
+        android:id="@+id/btnPork"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pork"
+        />
+
+    <Button
+        android:id="@+id/btnLamb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lamb"
+        />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvRestaurants"
+        android:id="@+id/rvRecipes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        android:paddingTop="16dp" />
-
-    <Button
-        android:id="@+id/btnDecide"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Decide for Me"
-        android:visibility="gone"
-        />
-
-    <TextView
-        android:id="@+id/tvResult"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
         android:paddingTop="16dp" />
 
 </LinearLayout>

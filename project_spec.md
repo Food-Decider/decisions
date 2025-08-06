@@ -35,39 +35,40 @@
 Required Features:
 <!-- V1: Basic recommendation engine for restaurants with filters (price, cuisine, distance) and simple recipe suggestions based on available ingredients. Could be tested with a small user group. -->
 
-- **Dining out: search by location**
-- **Cooking: search for recipes by one main ingredient**
+- **Choose to eat out or cook at home**
+- **Dining out: search by food**
+- **Dining out: pick restaurant**
+- **Cooking: recipe search by one main ingredient**
 
 Stretch Features:
 
-- **Dining out: filter by price, cuisine, distance**
-- **Cooking: search for recipes by multiple ingredients**
+- **Dining out: filter by price, location, distance**
+- **Cooking: search for recipes by main ingredients**
 
 ### 2. Chosen API(s)
 
-- **www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast**
-  - **list associated required feature here**
-  - ...
-- **https://www.themealdb.com/api/json/v1/1/filter.php?a=Chinese**
-  - **list associated required feature here**
-  - ...
+- **https://business.yelp.com/data/products/fusion/**
+  - **User inputs their food choice, such as pizza**
+- **www.themealdb.com/api/json/v1/1/filter.php?i=chicken**
+  - **User tick a box of one main ingredient, such as chicken**
 
 ### 3. User Interaction
 
 Required Feature
-
+- **App will randomly decide which restaurant for user to choose**
 - **Choose to eat out or cook at home**
-  - => **Eating out: Go to location search page. Cooking: Go to ingredient search page**
-  - ...
-- **Choose one location or ingredient**
-  - => **Navigate to the result page with a list of suggestions**
-  - Locations: Canadian, American, Japanese, Chinese, etc.
-  - Ingredients: Beef, Chicken, Dessert, Lamb, Pasta, etc.
+  - => **Eating out: Stay in the same page. Cooking: Go to ingredient search page**
+  - **Eating out: Type in a food option**
+      - => **Apps gives 3 restaurants serving that food**
+  - **Cooking: Choose a main ingredient**
+      - => **Apps gives multiple recipe suggestions for that ingredient**
 
 ## Wireframes
 
 <!-- Add picture of your hand sketched wireframes in this section -->
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="https://i.imgur.com/W2BroAc.jpeg" width=600>
+<img src="https://i.imgur.com/Xq61BPz.jpeg" width=600>
+<img src="https://i.imgur.com/Jnp43Nv.jpeg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
@@ -79,6 +80,8 @@ Here's a place for any other notes on the app, it's creation
 process, or what you learned this unit!  
 
 For Milestone 2, include **2+ Videos/GIFs** of the build process here!
+<img src="https://i.imgur.com/u7GLae2.gif" width=600>
+<img src="https://i.imgur.com/Qd8TWbq.gif" width=600>
 
 ## License
 

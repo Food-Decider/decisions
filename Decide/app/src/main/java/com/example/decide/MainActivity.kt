@@ -11,14 +11,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.fooddecider.Restaurant
 import com.example.decide.RestaurantAdapter
 import com.loopj.android.http.*
-import com.squareup.picasso.Picasso
 import cz.msebera.android.httpclient.Header
 import org.json.JSONObject
-import org.json.JSONArray
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var etFood: EditText
+    private lateinit var etZipCode: EditText
     private lateinit var btnFind: Button
     private lateinit var btnDecide: Button
     private lateinit var tvResult: TextView
@@ -33,11 +32,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         etFood = findViewById(R.id.etFood)
+        etZipCode = findViewById(R.id.etZipCode)
         btnFind = findViewById(R.id.btnFind)
         btnDecide = findViewById(R.id.btnDecide)
         tvResult = findViewById(R.id.tvResult)
         rvRestaurants = findViewById(R.id.rvRestaurants)
-
 
         adapter = RestaurantAdapter(restaurants)
         rvRestaurants.layoutManager = LinearLayoutManager(this)
@@ -45,10 +44,12 @@ class MainActivity : AppCompatActivity() {
 
         btnFind.setOnClickListener {
             val term = etFood.text.toString()
-            if (term.isNotBlank()) {
-                searchYelp(term)
+            val zip = etZipCode.text.toString()
+
+            if (term.isNotBlank() && zip.isNotBlank()) {
+                searchYelp(term, zip)
             } else {
-                Toast.makeText(this, "Please enter a craving", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Enter both craving and ZIP code", Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -58,25 +59,28 @@ class MainActivity : AppCompatActivity() {
 
         val changeButton = findViewById<Button>(R.id.btnChangeToCooking)
 
-        // Set click listener to launch Cooking activity
         changeButton.setOnClickListener {
             val intent = Intent(this, Cooking::class.java)
             startActivity(intent)
         }
     }
 
-    private fun searchYelp(term: String) {
+    private fun searchYelp(term: String, zip: String) {
         val url = "https://api.yelp.com/v3/businesses/search"
         val params = RequestParams()
         params.put("term", term)
-        params.put("location", "Los Angeles")
+        params.put("location", zip)
         params.put("limit", 3)
 
         client.removeAllHeaders()
         client.addHeader("Authorization", "Bearer " + getString(R.string.yelp_api_key))
 
         client.get(url, params, object : JsonHttpResponseHandler() {
-            override fun onSuccess(statusCode: Int, headers: Array<Header>, response: JSONObject) {
+            override fun onSuccess(
+                statusCode: Int,
+                headers: Array<Header>,
+                response: JSONObject
+            ) {
                 restaurants.clear()
                 val businesses = response.getJSONArray("businesses")
                 for (i in 0 until businesses.length()) {
@@ -91,7 +95,12 @@ class MainActivity : AppCompatActivity() {
                 tvResult.text = ""
             }
 
-            override fun onFailure(statusCode: Int, headers: Array<Header>?, throwable: Throwable?, errorResponse: JSONObject?) {
+            override fun onFailure(
+                statusCode: Int,
+                headers: Array<Header>?,
+                throwable: Throwable?,
+                errorResponse: JSONObject?
+            ) {
                 Toast.makeText(this@MainActivity, "Failed to fetch from Yelp", Toast.LENGTH_SHORT).show()
                 Log.e("YELP", "API failure", throwable)
             }
@@ -104,21 +113,9 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
-        // Pick a random restaurant
         val choiceIndex = (restaurants.indices).random()
         val chosen = restaurants[choiceIndex]
-
-        val yesNoUrl = "https://yesno.wtf/api"
-        client.get(yesNoUrl, object : JsonHttpResponseHandler() {
-            override fun onSuccess(statusCode: Int, headers: Array<Header>, response: JSONObject) {
-                val answer = response.getString("answer")
-                val message = "${chosen.name}\nShould you go here? $answer"
-                tvResult.text = message
-            }
-
-            override fun onFailure(statusCode: Int, headers: Array<Header>?, throwable: Throwable?, errorResponse: JSONObject?) {
-                tvResult.text = "${chosen.name}\n(Yes/No service failed)"
-            }
-        })
+        val message = "You should go to: ${chosen.name}"
+        tvResult.text = message
     }
 }

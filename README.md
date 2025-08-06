@@ -10,7 +10,7 @@ Submitted by:
 - **Michael Sim**
 - **Favour Asomba**
 
-Time spent: **10** hours spent in total
+Time spent: **20** hours spent in total
 
 ## Summary
 
@@ -40,7 +40,7 @@ The following REQUIRED files are included:
 
 The following EXTRA features are implemented:
 
-- [X] App uses an additional API (https://yesno.wtf/) that helps our users make even more decisions quickly!
+<!-- - [X] App uses an additional API (https://yesno.wtf/) that helps our users make even more decisions quickly! -->
 
 ## 🎥 Demo Video
 
